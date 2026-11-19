@@ -18,6 +18,8 @@ mod edi_runtime;
 mod error;
 #[cfg(test)]
 mod filter_map_guard_tests;
+mod flextext_bytes;
+pub use flextext_bytes::{FlexTextEmitError, emit_with_flextext_bytes};
 mod generator;
 mod identity;
 mod json5_output;
@@ -25,6 +27,8 @@ mod literal;
 mod mapping;
 mod owned_basic;
 mod primary_csv;
+mod protobuf_bytes;
+pub use protobuf_bytes::emit_with_protobuf_bytes;
 mod primary_csv_document;
 mod primary_edi_document;
 mod primary_filename;
@@ -38,6 +42,9 @@ pub use primary_json_document::emit_with_primary_json_documents;
 mod runtime;
 mod static_documents;
 mod x12_output;
+pub mod xbrl_documents;
+mod xlsx_document;
+pub use xlsx_document::emit_with_flat_xlsx_output;
 
 #[cfg(test)]
 mod composition_tests;
